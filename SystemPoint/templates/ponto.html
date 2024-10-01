@@ -1,0 +1,26 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título do Documento</title>
+    <link rel="stylesheet" href="{% static 'func/css/func.css' %}"> 
+</head>
+<body>
+    <h1>Registro de Horário</h1>
+    <form action="{% url 'ver_ponto' %}" method="POST"> {% csrf_token %}
+        <label for="entrada">Hora de Entrada:</label>
+        <input type="time" id="entrada" name="entrada" required><br><br>
+
+        <label for="saida">Hora de Saída:</label>
+        <input type="time" id="saida" name="saida" required><br><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
