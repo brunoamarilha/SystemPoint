@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-etdrfne)oxb2fm2sj3n-^q-2_4#g&(we!z=%xl7+i4@3t92np%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -68,7 +68,11 @@ WSGI_APPLICATION = 'SystemPoint.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.mysql',
+        'NAME': 'sys',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',  
+        'PORT': '3306', 
     }
 }
 
